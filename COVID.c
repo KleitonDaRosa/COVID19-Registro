@@ -8,15 +8,9 @@
 
 
 
-void menudoPrograma(){
-    printf("=======MENU========\n");
-    printf("(1) - Criar um registro de COVID19\n");
-    printf("(2) - Mostrar a Estatistica COVID19\n");
-    printf("(3) - \n");
 
 
 
-}
 
 
 
@@ -39,6 +33,17 @@ typedef struct covid{
     return covid;
     }
 
+
+
+	void menuPrograma(){
+	printf("=======MENU=======");
+	printf("\n\n(1) Criar um registo");
+	printf("\n(2) Consultar todos os Registos");
+		
+	
+	
+	
+	}
 //procurar se a lista esta vazia
 
     int listaVazia (COVID * lista)
@@ -111,7 +116,7 @@ typedef struct covid{
 
 
 
- //Esta funÁao permite procurar um elemento na lista
+ //Esta fun√ßao permite procurar um elemento na lista
  void procurarElemento(COVID* lista,char *nomePaisAprocurar){
     if(listaVazia(lista)){
         printf("\nLista Vazia\n");
@@ -134,7 +139,7 @@ typedef struct covid{
         printf("Numero de Obitos: %d \n",target->obitos);
         printf("Numero de Casos Recuperados:%d",target->recuperados);
     }else{
-        printf("\n%s n„o encontrado na lista",&nomePaisAprocurar);
+        printf("\n%s n√£o encontrado na lista",&nomePaisAprocurar);
     }
 
  }
@@ -188,6 +193,9 @@ void numeroElementosLista(COVID* lista){
 
 
 int main (){
+   
+	
+	
     COVID *lista = alocaCOVID();
     iniciarLista(lista);
     int option,numeroCasos,numeroRecuperados,numeroObitos,numeroCasosAtivos;
